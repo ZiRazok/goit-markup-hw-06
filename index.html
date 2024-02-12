@@ -15,23 +15,32 @@
         integrity="sha512-4xo8blKMVCiXpTaLzQSLSw3KFOVPWhm/TRtuPVc4WG6kUgjH6J03IBuG7JZPkcWMxJ5huwaBpOpnwYElP/m6wg=="
         crossorigin="anonymous" referrerpolicy="no-referrer" />
     <link rel="stylesheet" href="css/styles.css">
+    <script src="./js/script.js" defer></script>
 </head>
 
 <body>
     <!-- Top menu -->
-    <header class="header" id="header">
+    <header class="header">
         <div class="container">
             <!-- Navigation -->
             <nav class="header-nav">
                 <!-- Logo -->
                 <a href="./index.html" class="logo nav-logo">Web<span class="logo-span">Studio</span></a>
+
                 <!-- Menu -->
                 <ul class="nav-list">
-                    <li class="nav-item"><a class="nav-link is-active" href="#header">Studio</a></li>
-                    <li class="nav-item"><a class="nav-link" href="#portfolio">Portfolio</a></li>
-                    <li class="nav-item"><a class="nav-link" href="#team">Contacts</a></li>
+                    <li class="nav-item"><a class="nav-link is-active" href="./index.html">Studio</a></li>
+                    <li class="nav-item"><a class="nav-link" href="">Portfolio</a></li>
+                    <li class="nav-item"><a class="nav-link" href="">Contacts</a></li>
                 </ul>
             </nav>
+
+            <!-- button menu -->
+            <button class="nav-btn-menu" type="button" id="openMenuBtn">
+                <svg class="nav-btn-icon" width="24" height="24">
+                    <use href="./images/icons.svg#icon-btn-menu"></use>
+                </svg>
+            </button>
 
             <!-- Contacts -->
             <address class="header-address">
@@ -49,10 +58,10 @@
     <!-- Main content -->
     <main>
         <!-- Hero (1) -->
-        <section class="section-hero section">
+        <section class="section-hero">
             <div class="container">
                 <h1 class="hero-main-heading">Effective Solutions for Your Business</h1>
-                <button type="button" class="hero-button">Order Service</button>
+                <button type="button" class="hero-button" id="openModalBtn">Order Service</button>
             </div>
         </section>
 
@@ -115,7 +124,7 @@
         </section>
 
         <!-- Our team (3) -->
-        <section class="section-team section" id="team">
+        <section class="section-team section">
             <div class="container">
                 <h2 class="team-subheading">Our Team</h2>
                 <ul class="team-list">
@@ -283,7 +292,7 @@
         </section>
 
         <!-- Our portfolio (4) -->
-        <section class="section-portfolio section" id="portfolio">
+        <section class="section-portfolio section">
             <div class="container">
                 <h2 class="portfolio-subheading">Our Portfolio</h2>
                 <ul class="portfolio-list">
@@ -428,8 +437,8 @@
         </section>
     </main>
 
-    <!-- Other info -->
-    <footer class="footer">
+    <!-- footer -->
+    <footer class="footer ">
         <!-- Logo -->
         <div class="container">
             <div class="footer-left-text">
@@ -488,11 +497,10 @@
             </div>
         </div>
     </footer>
-
     <!-- Mokal -->
-    <div class="modal-backdrop">
+    <div class="modal-backdrop" id="modalWindow">
         <div class="modal-container">
-            <button class="modal-btn-close" type="button">
+            <button class="modal-btn-close" type="button" id="colseMoadalBtn">
                 <svg class="btn-close-icon" width="8" height="8">
                     <use href="./images/icons.svg#icon-form-close"></use>
                 </svg>
@@ -537,17 +545,74 @@
                     <label class="modal-checkbox-label" for="user-privacy">
                         <span class="modal-checkbox-custom">
                             <svg class="modal-checkbox-icon" width="10" height="8">
-                                <use href="./images/icons.svg#icon-form-is-checked"></use>
+                                <use href="./images/icons.svg#icon-form-checked"></use>
                             </svg>
                         </span>
-                        I accept the terms and conditions of the
-                        <a class="modal-checkbox-link" href="">Privacy Policy</a>
+                        <span>I accept the terms and conditions of the
+                            <a class="modal-checkbox-link" href="">Privacy Policy</a>
+                        </span>
                     </label>
                 </div>
                 <button class="modal-btn-submit" type="submit">Send</button>
             </form>
         </div>
     </div>
+
+    <!-- Mobile menu -->
+    <div class="mobile-menu" id="menuWindow">
+        <button class="menu-close-btn" type="button" id="closeMenuBtn">
+            <svg class="menu-close-icon" width="8" height="8">
+                <use href="./images/icons.svg#icon-form-close"></use>
+            </svg>
+        </button>
+        <nav class="mobile-menu-nav">
+            <ul class="menu-nav-list">
+                <li class="menu-nav-item"><a href="" class="menu-nav-link">Studio</a></li>
+                <li class="menu-nav-item"><a href="" class="menu-nav-link">Potrfolio</a></li>
+                <li class="menu-nav-item"><a href="" class="menu-nav-link">Contacts</a></li>
+            </ul>
+        </nav>
+        <address class="mobile-menu-address">
+            <ul class="menu-address-list">
+                <li class="menu-address-item"><a href="tel:+110001111111" class="menu-address-link">+11 (000)
+                        111-11-11</a></li>
+                <li class="menu-address-item"><a href="mailto:info@devstudio.com"
+                        class="menu-address-link">info@devstudio.com</a></li>
+            </ul>
+            <ul class="menu-social-list">
+                <li class="menu-social-item">
+                    <a href="" class="menu-social-link">
+                        <svg class="menu-social-icon" width="24" height="24">
+                            <use href="./images/icons.svg#icon-instagram"></use>
+                        </svg>
+                    </a>
+                </li>
+                <li class="menu-social-item">
+                    <a href="" class="menu-social-link">
+                        <svg class="menu-social-icon" width="24" height="24">
+                            <use href="./images/icons.svg#icon-twitter"></use>
+                        </svg>
+                    </a>
+                </li>
+                <li class="menu-social-item">
+                    <a href="" class="menu-social-link">
+                        <svg class="menu-social-icon" width="24" height="24">
+                            <use href="./images/icons.svg#icon-facebook"></use>
+                        </svg>
+                    </a>
+                </li>
+                <li class="menu-social-item">
+                    <a href="" class="menu-social-link">
+                        <svg class="menu-social-icon" width="24" height="24">
+                            <use href="./images/icons.svg#icon-linkedin"></use>
+                        </svg>
+                    </a>
+                </li>
+            </ul>
+        </address>
+
+    </div>
+
 </body>
 
 </html>
