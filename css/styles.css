@@ -255,8 +255,8 @@ textarea {
 
 
 
-/* Section Title (1) */
-.section-title {
+/* Section Hero (1) */
+.section-hero {
     max-width: 1440px;
     background-image: linear-gradient(rgba(46, 47, 66, 0.7), rgba(46, 47, 66, 0.7)), url(../images/section-title-bg.jpg);
     background-repeat: no-repeat;
@@ -266,12 +266,12 @@ textarea {
     margin: 0 auto;
 }
 
-.title-main-heading {
+.hero-main-heading {
     max-width: 496px;
     margin: 0 auto;
 }
 
-.title-button {
+.hero-button {
     font-family: 'Roboto', sans-serif;
     font-weight: 500;
     font-size: 16px;
@@ -290,8 +290,8 @@ textarea {
     transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1)
 }
 
-.title-button:hover,
-.title-button:focus {
+.hero-button:hover,
+.hero-button:focus {
     background-color: #404BBF;
 }
 
