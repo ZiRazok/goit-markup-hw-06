@@ -907,7 +907,7 @@ screen and (min-resolution: 2dppx) {
 
 @media screen and (min-width: 1158px) {
     .footer .container {
-        padding: 0;
+        padding: 0 15px;
         gap: 0;
     }
 
@@ -1215,9 +1215,17 @@ screen and (min-resolution: 2dppx) {
     transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
+.menu-nav-item:first-child>.menu-nav-link{
+    color: #404bbf;
+}
+
 .menu-nav-link:hover,
 .menu-nav-link:focus {
     color: #404bbf;
+}
+
+.mobile-menu-address{
+    font-style: normal;
 }
 
 .menu-address-list {
@@ -1236,6 +1244,11 @@ screen and (min-resolution: 2dppx) {
     color: #434455;
     transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
+
+.menu-address-item:first-child>.menu-address-link{
+    color: #404bbf;
+}
+
 .menu-address-link:hover,
 .menu-address-link:focus{
     color: #404bbf;
